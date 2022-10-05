@@ -26,9 +26,9 @@ public class ChuyenBayController {
 	public List<ChuyenBay> listChuyenBayDenVaDi(){
 	 return	chuyenBayService.listChuyenBayDenVaDi();
 	}
-	@RequestMapping("/chuyenbay/numSGN")
+	@RequestMapping("/chuyenbay/sumSGN")
 	public int numChuyenBaySGN() {
-		return chuyenBayService.numChuyenBaySGN();
+		return chuyenBayService.sumChuyenBaySGN();
 	}
 	@RequestMapping("/chuyenbay/gaDen")
 	public List<String> listfindGroupGaDi() {

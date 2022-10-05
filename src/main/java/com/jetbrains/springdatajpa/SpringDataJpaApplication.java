@@ -132,7 +132,7 @@ public class SpringDataJpaApplication {
 //			21. Với mỗi địa điểm xuất phát cho biết có bao nhiêu chuyến bay có thể khởi hành trước 12:00.
 			System.out.println(
 					"-------------------------- 21. Với mỗi địa điểm xuất phát cho biết có bao nhiêu chuyến bay có thể khởi hành trước 12:00.-----------------------------");
-			for (Object[] objects : chuyenBayDao.list1200GroupGaDi()) {
+			for (Object[] objects : chuyenBayDao.listGroupGaDi()) {
 				System.out.println("GaDi: " + objects[0] + ", So luong chuyen khoi hanh: " + objects[1]);
 			}
 //			22.	Cho biết mã số của các phi công chỉ lái được 3 loại máy bay

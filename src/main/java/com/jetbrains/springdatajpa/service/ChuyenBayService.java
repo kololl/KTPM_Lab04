@@ -40,7 +40,7 @@ public class ChuyenBayService implements ChuyenBayServiceImpl{
 	}
 
 	@Override
-	public int numChuyenBaySGN() {
+	public int sumChuyenBaySGN() {
 		int chuyenbay = chuyenBayDAOImpl.numChuyenBaySGN();
 		return chuyenbay;
 	}

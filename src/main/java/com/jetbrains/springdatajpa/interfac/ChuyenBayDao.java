@@ -14,8 +14,10 @@ import com.jetbrains.springdatajpa.entity.ChuyenBay;
 
 @Repository
 public interface ChuyenBayDao extends JpaRepository<ChuyenBay, String> {
+	//Cho biết các chuyến bay đi Đà Lạt (DAD).
 	@Query(value = "select *from chuyenbay where GaDi =:name",nativeQuery = true)
 	public List<ChuyenBay> listChuyenBayDAD(@Param(value = "name")String name);
+	// Cho biết các chuyến bay có độ dài đường bay nhỏ hơn 10.000km và lớn hơn 8.000km.
 	@Query(value = "select *from chuyenbay where DoDai < 10000 and  DoDai > 8000",nativeQuery = true)
 	public List<ChuyenBay> listChuyenBay10To8();
 //	select *from chuyenbay where GaDi like 'SGN' and GaDen like 'BMV'
@@ -35,11 +37,12 @@ public interface ChuyenBayDao extends JpaRepository<ChuyenBay, String> {
 	public List<ChuyenBay> list1200();
 //	select GaDi,COUNT(GaDi) from chuyenbay where GioDi <'12:00:00' group by GaDi
 	@Query(value = "select GaDi,COUNT(GaDi) from chuyenbay where GioDi <'12:00:00' group by GaDi",nativeQuery = true)
-	public List<Object[]> list1200GroupGaDi();
+	public List<Object[]> listtruoc1200();
 //	SELECT * FROM chuyenbay WHERE chuyenbay.DoDai < ( SELECT MAX(maybay.TamBay) FROM maybay WHERE maybay.Loai LIKE ('%Boeing%') )
 	@Query(value = "SELECT * FROM chuyenbay WHERE chuyenbay.DoDai < ( SELECT MAX(maybay.TamBay) FROM maybay WHERE maybay.Loai LIKE (%:loai%) )",nativeQuery = true)
 	public List<Object[]> listMaxTamBayOfBoeing(@Param(value = "loai")String loai);
 //	SELECT chuyenbay.GaDi, SUM(chuyenbay.ChiPhi) as total FROM chuyenbay GROUP BY(chuyenbay.GaDi)
 	@Query(value = "SELECT chuyenbay.GaDi, SUM(chuyenbay.ChiPhi) as total FROM chuyenbay GROUP BY(chuyenbay.GaDi)",nativeQuery = true)
 	public List<Object[]> listSumChiPhi();
+	
 }
