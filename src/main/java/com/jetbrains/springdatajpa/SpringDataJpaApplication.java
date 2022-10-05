@@ -8,10 +8,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
-import com.jetbrains.interfac.ChungNhanDao;
-import com.jetbrains.interfac.ChuyenBayDao;
-import com.jetbrains.interfac.MayBayDao;
-import com.jetbrains.interfac.NhanVienDao;
+import com.jetbrains.springdatajpa.interfac.ChungNhanDao;
+import com.jetbrains.springdatajpa.interfac.ChuyenBayDao;
+import com.jetbrains.springdatajpa.interfac.MayBayDao;
+import com.jetbrains.springdatajpa.interfac.NhanVienDao;
 
 @SpringBootApplication
 @org.springframework.transaction.annotation.Transactional

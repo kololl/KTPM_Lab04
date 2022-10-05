@@ -1,4 +1,4 @@
-package com.jetbrains.entity;
+package com.jetbrains.springdatajpa.entity;
 
 import java.io.Serializable;
 import java.util.Objects;

@@ -1,4 +1,4 @@
-package com.jetbrains.interfac;
+package com.jetbrains.springdatajpa.interfac;
 
 import java.util.List;
 
@@ -6,7 +6,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
-import com.jetbrains.entity.NhanVien;
+import com.jetbrains.springdatajpa.entity.NhanVien;
 
 
 @Repository
