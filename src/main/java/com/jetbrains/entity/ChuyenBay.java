@@ -1,7 +1,5 @@
 package com.jetbrains.entity;
 
-
-
 import java.io.Serializable;
 import java.sql.Time;
 import java.time.LocalTime;
@@ -15,23 +13,20 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "chuyenbay")
 public class ChuyenBay implements Serializable{
-
 	@Id
-	@Column(columnDefinition = "varchar(5)")
+	@Column(name = "MaCB",columnDefinition = "varchar(5)")
 	private String MaCB;
-	@Column(columnDefinition = "varchar(50)")
+	@Column(name = "GaDi",columnDefinition = "varchar(50)")
 	private String GaDi;
-	@Column(columnDefinition = "varchar(50)")
+	@Column(name = "GaDen",columnDefinition = "varchar(50)")
 	private String GaDen;
-
-    @Column(columnDefinition = "integer default 25")
-	private Integer DoDai;
-	@Column( columnDefinition = "TIME")
+    @Column(name = "DoDai")
+	private int DoDai;
+	@Column(name = "GioDi", columnDefinition = "TIME(7)")
 	private LocalTime GioDi;
-	@Column( columnDefinition = "TIME")
+	@Column(name = "GioDen", columnDefinition = "TIME(7)")
 	private LocalTime GioDen;
-
-    @Column(columnDefinition = "integer default 25")
+    @Column(name = "ChiPhi")
 	private int ChiPhi;
 	public String getMaCB() {
 		return MaCB;
@@ -95,4 +90,3 @@ public class ChuyenBay implements Serializable{
 	}
 	
 }
-

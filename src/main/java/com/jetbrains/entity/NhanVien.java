@@ -1,7 +1,5 @@
 package com.jetbrains.entity;
 
-
-
 import java.io.Serializable;
 import java.util.List;
 
@@ -56,4 +54,3 @@ public class NhanVien implements Serializable{
 	}
 	
 }
-

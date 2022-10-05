@@ -1,18 +1,16 @@
 package com.jetbrains.entity;
 
-
-
 import java.io.Serializable;
 import java.util.Objects;
 
 import javax.persistence.Embeddable;
 
 @Embeddable
-public class ChungNhanPK implements Serializable{
+public class ChungNhanPk implements Serializable{
 
 	private String maNV;
 	private int MaMB;
-	public ChungNhanPK() {
+	public ChungNhanPk() {
 		super();
 	}
 	@Override
@@ -27,9 +25,8 @@ public class ChungNhanPK implements Serializable{
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		ChungNhanPK other = (ChungNhanPK) obj;
+		ChungNhanPk other = (ChungNhanPk) obj;
 		return MaMB == other.MaMB && Objects.equals(maNV, other.maNV);
 	}
 	
 }
-
